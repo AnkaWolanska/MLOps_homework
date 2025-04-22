@@ -1,7 +1,33 @@
+[tool.uv]
+default-groups = ["dev", "ai", "api"]
+
 [project]
 name = "mlops-homework"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+
+[dependency-groups]
+dev = [
+    "clean-text>=0.4.0,<0.5.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-dotenv>=0.5.2",
+    "uvicorn>=0.34.1",
+    "pyyaml>=6.0.2",
+    "python-dotenv>=1.1.0",
+]
+ai = [
+    "torch>=2.0.0,<3.0.0",
+    "transformers>=4.0.0,<5.0.0",
+    "scikit-learn>=1.6.1",
+    "joblib>=1.2.0,<2.0.0",
+    "torchvision>=0.21.0",
+]
+api = [
+    "fastapi>=0.115.12",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.8.1",
+]
