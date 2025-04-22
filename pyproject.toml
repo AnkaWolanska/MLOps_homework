@@ -13,6 +13,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "cloudpickle>=2.2.1",
     "clean-text>=0.4.0,<0.5.0",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
@@ -22,6 +23,7 @@ dev = [
     "pyyaml>=6.0.2",
     "python-dotenv>=1.1.0",
 ]
+
 ai = [
     "torch>=2.0.0,<3.0.0",
     "transformers>=4.0.0,<5.0.0",
