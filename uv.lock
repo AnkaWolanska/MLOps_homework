@@ -359,11 +359,11 @@ requires-dist = [{ name = "pre-commit", specifier = ">=4.2.0" }]
 
 [package.metadata.requires-dev]
 ai = [
-    { name = "joblib", specifier = ">=1.2.0,<2.0.0" },
+    { name = "joblib", specifier = ">=1.4.2" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
-    { name = "torch", specifier = ">=2.0.0,<3.0.0" },
+    { name = "torch", specifier = ">=2.6" },
     { name = "torchvision", specifier = ">=0.21.0" },
-    { name = "transformers", specifier = ">=4.0.0,<5.0.0" },
+    { name = "transformers", specifier = "==4.36.0" },
 ]
 api = [
     { name = "fastapi", specifier = ">=0.115.12" },
@@ -372,7 +372,7 @@ api = [
 ]
 dev = [
     { name = "clean-text", specifier = ">=0.4.0,<0.5.0" },
-    { name = "cloudpickle", specifier = ">=2.2.1" },
+    { name = "cloudpickle", specifier = "==3.1.1" },
     { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest-asyncio", specifier = ">=0.26.0" },
@@ -989,27 +989,35 @@ wheels = [
 
 [[package]]
 name = "tokenizers"
-version = "0.21.1"
+version = "0.15.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "huggingface-hub" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/92/76/5ac0c97f1117b91b7eb7323dcd61af80d72f790b4df71249a7850c195f30/tokenizers-0.21.1.tar.gz", hash = "sha256:a1bb04dc5b448985f86ecd4b05407f5a8d97cb2c0532199b2a302a604a0165ab", size = 343256 }
+sdist = { url = "https://files.pythonhosted.org/packages/c0/44/625db94e91c6196b6574359fa70bfe28e8eabf57a1b894f8f0ec69727fd1/tokenizers-0.15.2.tar.gz", hash = "sha256:e6e9c6e019dd5484be5beafc775ae6c925f4c69a3487040ed09b45e13df2cb91", size = 320256 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a5/1f/328aee25f9115bf04262e8b4e5a2050b7b7cf44b59c74e982db7270c7f30/tokenizers-0.21.1-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e78e413e9e668ad790a29456e677d9d3aa50a9ad311a40905d6861ba7692cf41", size = 2780767 },
-    { url = "https://files.pythonhosted.org/packages/ae/1a/4526797f3719b0287853f12c5ad563a9be09d446c44ac784cdd7c50f76ab/tokenizers-0.21.1-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:cd51cd0a91ecc801633829fcd1fda9cf8682ed3477c6243b9a095539de4aecf3", size = 2650555 },
-    { url = "https://files.pythonhosted.org/packages/4d/7a/a209b29f971a9fdc1da86f917fe4524564924db50d13f0724feed37b2a4d/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:28da6b72d4fb14ee200a1bd386ff74ade8992d7f725f2bde2c495a9a98cf4d9f", size = 2937541 },
-    { url = "https://files.pythonhosted.org/packages/3c/1e/b788b50ffc6191e0b1fc2b0d49df8cff16fe415302e5ceb89f619d12c5bc/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:34d8cfde551c9916cb92014e040806122295a6800914bab5865deb85623931cf", size = 2819058 },
-    { url = "https://files.pythonhosted.org/packages/36/aa/3626dfa09a0ecc5b57a8c58eeaeb7dd7ca9a37ad9dd681edab5acd55764c/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:aaa852d23e125b73d283c98f007e06d4595732104b65402f46e8ef24b588d9f8", size = 3133278 },
-    { url = "https://files.pythonhosted.org/packages/a4/4d/8fbc203838b3d26269f944a89459d94c858f5b3f9a9b6ee9728cdcf69161/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:a21a15d5c8e603331b8a59548bbe113564136dc0f5ad8306dd5033459a226da0", size = 3144253 },
-    { url = "https://files.pythonhosted.org/packages/d8/1b/2bd062adeb7c7511b847b32e356024980c0ffcf35f28947792c2d8ad2288/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2fdbd4c067c60a0ac7eca14b6bd18a5bebace54eb757c706b47ea93204f7a37c", size = 3398225 },
-    { url = "https://files.pythonhosted.org/packages/8a/63/38be071b0c8e06840bc6046991636bcb30c27f6bb1e670f4f4bc87cf49cc/tokenizers-0.21.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2dd9a0061e403546f7377df940e866c3e678d7d4e9643d0461ea442b4f89e61a", size = 3038874 },
-    { url = "https://files.pythonhosted.org/packages/ec/83/afa94193c09246417c23a3c75a8a0a96bf44ab5630a3015538d0c316dd4b/tokenizers-0.21.1-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:db9484aeb2e200c43b915a1a0150ea885e35f357a5a8fabf7373af333dcc8dbf", size = 9014448 },
-    { url = "https://files.pythonhosted.org/packages/ae/b3/0e1a37d4f84c0f014d43701c11eb8072704f6efe8d8fc2dcdb79c47d76de/tokenizers-0.21.1-cp39-abi3-musllinux_1_2_armv7l.whl", hash = "sha256:ed248ab5279e601a30a4d67bdb897ecbe955a50f1e7bb62bd99f07dd11c2f5b6", size = 8937877 },
-    { url = "https://files.pythonhosted.org/packages/ac/33/ff08f50e6d615eb180a4a328c65907feb6ded0b8f990ec923969759dc379/tokenizers-0.21.1-cp39-abi3-musllinux_1_2_i686.whl", hash = "sha256:9ac78b12e541d4ce67b4dfd970e44c060a2147b9b2a21f509566d556a509c67d", size = 9186645 },
-    { url = "https://files.pythonhosted.org/packages/5f/aa/8ae85f69a9f6012c6f8011c6f4aa1c96154c816e9eea2e1b758601157833/tokenizers-0.21.1-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:e5a69c1a4496b81a5ee5d2c1f3f7fbdf95e90a0196101b0ee89ed9956b8a168f", size = 9384380 },
-    { url = "https://files.pythonhosted.org/packages/e8/5b/a5d98c89f747455e8b7a9504910c865d5e51da55e825a7ae641fb5ff0a58/tokenizers-0.21.1-cp39-abi3-win32.whl", hash = "sha256:1039a3a5734944e09de1d48761ade94e00d0fa760c0e0551151d4dd851ba63e3", size = 2239506 },
-    { url = "https://files.pythonhosted.org/packages/e6/b6/072a8e053ae600dcc2ac0da81a23548e3b523301a442a6ca900e92ac35be/tokenizers-0.21.1-cp39-abi3-win_amd64.whl", hash = "sha256:0f0dcbcc9f6e13e675a66d7a5f2f225a736745ce484c1a4e07476a89ccdad382", size = 2435481 },
+    { url = "https://files.pythonhosted.org/packages/ae/ca/ea4b5aa70d4d26f2d05620c265b07b5a249157767c1673f5753b8bfc7db1/tokenizers-0.15.2-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:f86593c18d2e6248e72fb91c77d413a815153b8ea4e31f7cd443bdf28e467670", size = 2574444 },
+    { url = "https://files.pythonhosted.org/packages/f9/99/5a55a9b6e2db274c0969ad57d989d02efae90f9e558983a561c9b2b7ea1a/tokenizers-0.15.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:0774bccc6608eca23eb9d620196687c8b2360624619623cf4ba9dc9bd53e8b51", size = 2411608 },
+    { url = "https://files.pythonhosted.org/packages/82/cc/29bb3a25c06b90ce82bb20ef074011481de5c44413a1e1eb10cfd93080fb/tokenizers-0.15.2-cp312-cp312-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:d0222c5b7c9b26c0b4822a82f6a7011de0a9d3060e1da176f66274b70f846b98", size = 3652367 },
+    { url = "https://files.pythonhosted.org/packages/c0/ae/f6a974be9b2e1615f3de3cc9e4fc2897a86357400801c58143c67cbbad2e/tokenizers-0.15.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3835738be1de66624fff2f4f6f6684775da4e9c00bde053be7564cbf3545cc66", size = 3529509 },
+    { url = "https://files.pythonhosted.org/packages/d6/42/340b91f675b494c4ecc0a256c5dd88b4003dbfde05afff90b970738fdfb4/tokenizers-0.15.2-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:0143e7d9dcd811855c1ce1ab9bf5d96d29bf5e528fd6c7824d0465741e8c10fd", size = 3396516 },
+    { url = "https://files.pythonhosted.org/packages/6f/b2/8a965abc17fff309eb06e98ce429a19a5e04f731a669a6113b9e182f8a79/tokenizers-0.15.2-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:db35825f6d54215f6b6009a7ff3eedee0848c99a6271c870d2826fbbedf31a38", size = 3918811 },
+    { url = "https://files.pythonhosted.org/packages/6c/16/dad7b4aa6e34a395aef7ae7b010d8b5ebefdf3df81510de53d7f17d2f0fc/tokenizers-0.15.2-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:3f5e64b0389a2be47091d8cc53c87859783b837ea1a06edd9d8e04004df55a5c", size = 4025494 },
+    { url = "https://files.pythonhosted.org/packages/f6/de/3707df0c1d7bf55e6a4dba724700353bfee8e292fdd8ccfe93416549124d/tokenizers-0.15.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9e0480c452217edd35eca56fafe2029fb4d368b7c0475f8dfa3c5c9c400a7456", size = 3575314 },
+    { url = "https://files.pythonhosted.org/packages/2e/dd/7b8da304d152bb46f13bc2ba5bd545480ab6ce39d94a53eef07f7624d235/tokenizers-0.15.2-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:a33ab881c8fe70474980577e033d0bc9a27b7ab8272896e500708b212995d834", size = 9682779 },
+    { url = "https://files.pythonhosted.org/packages/07/aa/66e8a81e07a791ca6ee9d74ee6de1ffbcd3985149f13aeb530bd409baba0/tokenizers-0.15.2-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:a308a607ca9de2c64c1b9ba79ec9a403969715a1b8ba5f998a676826f1a7039d", size = 9995614 },
+    { url = "https://files.pythonhosted.org/packages/bf/e1/aed3bc98785c54bd26bf6dd3d2f54cc00de33e8b1f922a23131372eedec8/tokenizers-0.15.2-cp312-none-win32.whl", hash = "sha256:b8fcfa81bcb9447df582c5bc96a031e6df4da2a774b8080d4f02c0c16b42be0b", size = 2011030 },
+    { url = "https://files.pythonhosted.org/packages/c9/ea/5800f4941a713b2feed955b6a256aacc1ca68a6699916d2668622c075d38/tokenizers-0.15.2-cp312-none-win_amd64.whl", hash = "sha256:38d7ab43c6825abfc0b661d95f39c7f8af2449364f01d331f3b51c94dcff7221", size = 2180523 },
+    { url = "https://files.pythonhosted.org/packages/6d/04/406f35822d785ccdcd740f95ba58515c739b6d57c05dd278ee64c70d1565/tokenizers-0.15.2-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:38bfb0204ff3246ca4d5e726e8cc8403bfc931090151e6eede54d0e0cf162ef0", size = 2574496 },
+    { url = "https://files.pythonhosted.org/packages/6c/b4/6cc305767c9b1b97b8f5bc61fc472abf42b24ad39388e8f0c57250a7c145/tokenizers-0.15.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:9c861d35e8286a53e06e9e28d030b5a05bcbf5ac9d7229e561e53c352a85b1fc", size = 2411609 },
+    { url = "https://files.pythonhosted.org/packages/6b/6c/ae2437a3e233298a962053c62b943ffabb38627fd6787ff8da62352333fa/tokenizers-0.15.2-cp313-cp313-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:936bf3842db5b2048eaa53dade907b1160f318e7c90c74bfab86f1e47720bdd6", size = 3652369 },
+    { url = "https://files.pythonhosted.org/packages/00/8b/21600349146d9fa4d341c507faf8d11b7292b7f29f8def440b81e65ad1ee/tokenizers-0.15.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:620beacc3373277700d0e27718aa8b25f7b383eb8001fba94ee00aeea1459d89", size = 3529510 },
+    { url = "https://files.pythonhosted.org/packages/53/cd/6ffc60fbc5eae02629d736d578a7c5ca5c20b2b84e9866d61a0c6395684a/tokenizers-0.15.2-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:2735ecbbf37e52db4ea970e539fd2d450d213517b77745114f92867f3fc246eb", size = 3396516 },
+    { url = "https://files.pythonhosted.org/packages/d5/4c/15b66eb6a47dc9345192aa77988655830c1ebd1306d2b894ecd28fbfbbca/tokenizers-0.15.2-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:473c83c5e2359bb81b0b6fde870b41b2764fcdd36d997485e07e72cc3a62264a", size = 3918812 },
+    { url = "https://files.pythonhosted.org/packages/ed/3b/f9df83311475e456473958cce65a3709f07a1d1dd8ed046d4779ec4336c8/tokenizers-0.15.2-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:968fa1fb3c27398b28a4eca1cbd1e19355c4d3a6007f7398d48826bbe3a0f728", size = 4025495 },
+    { url = "https://files.pythonhosted.org/packages/36/ee/2055fbeb590719393d29cea3016491fd3a6da10598541bff256cc3750349/tokenizers-0.15.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:865c60ae6eaebdde7da66191ee9b7db52e542ed8ee9d2c653b6d190a9351b980", size = 3575316 },
+    { url = "https://files.pythonhosted.org/packages/93/53/ae4e5e49bdc61849b668263a1a4c398b4e33aea1bb9b0a59c9677bb5266b/tokenizers-0.15.2-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:7c0d8b52664ab2d4a8d6686eb5effc68b78608a9008f086a122a7b2996befbab", size = 9682779 },
+    { url = "https://files.pythonhosted.org/packages/04/c6/8818b867611734889cd8faca1153ec5dbdd59c98e85e5f6980e7be338839/tokenizers-0.15.2-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:f33dfbdec3784093a9aebb3680d1f91336c56d86cc70ddf88708251da1fe9064", size = 9995614 },
 ]
 
 [[package]]
@@ -1086,7 +1094,7 @@ wheels = [
 
 [[package]]
 name = "transformers"
-version = "4.51.3"
+version = "4.36.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
@@ -1100,9 +1108,9 @@ dependencies = [
     { name = "tokenizers" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f1/11/7414d5bc07690002ce4d7553602107bf969af85144bbd02830f9fb471236/transformers-4.51.3.tar.gz", hash = "sha256:e292fcab3990c6defe6328f0f7d2004283ca81a7a07b2de9a46d67fd81ea1409", size = 8941266 }
+sdist = { url = "https://files.pythonhosted.org/packages/63/f6/ae58c9d939d582bdb67b348ca0204e99e0a8403d24e12eb266a753abcc47/transformers-4.36.0.tar.gz", hash = "sha256:64e120d252db4bdcd355288d19e857dac9d89886f9d0ac20244cb9af3142bb50", size = 7107626 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a9/b6/5257d04ae327b44db31f15cce39e6020cc986333c715660b1315a9724d82/transformers-4.51.3-py3-none-any.whl", hash = "sha256:fd3279633ceb2b777013234bbf0b4f5c2d23c4626b05497691f00cfda55e8a83", size = 10383940 },
+    { url = "https://files.pythonhosted.org/packages/0f/12/d8e27a190ca67811f81deea3183b528d9169f10b74d827e0b9211520ecfa/transformers-4.36.0-py3-none-any.whl", hash = "sha256:e5a9d9424bcbc5008782ddd79ecbc3a50991e168cc730a14c4c89e80c61f419d", size = 8217626 },
 ]
 
 [[package]]
