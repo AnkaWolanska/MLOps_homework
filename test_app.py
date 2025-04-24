@@ -24,15 +24,16 @@ def test_empty_input():
 def test_model_loading():
     assert inference is not None
 
-def test_model_inference():
-    sample_texts = [
-        "I love this product!",
-        "This is the worst experience I've ever had.",
-        "It's okay, not great but not terrible."
-    ]
-    for text in sample_texts:
-        prediction = inference.predict(text)
-        assert isinstance(prediction, str)
+testdata = [
+    ("I love this product!", "positive"),
+    ("This is the worst experience I've ever had.", "negative"),
+    ("It's okay, not great but not terrible.", "positive"),
+]
+
+@pytest.mark.parametrize("text, expected_prediction", testdata)
+def test_model_inference(text, expected_prediction):
+    prediction = inference.predict(text)
+    assert prediction == expected_prediction
 
 def test_response_validation():
     response = client.post(
