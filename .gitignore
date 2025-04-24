@@ -176,5 +176,4 @@ cython_debug/
 .DS_Store
 
 # Model
-*.pkl
 *.joblib
