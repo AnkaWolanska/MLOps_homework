@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, validator
 import cloudpickle
 from pathlib import Path
-from artifacts.inference import Inference
 
 app = FastAPI()
 
@@ -24,9 +23,8 @@ class PredictResponse(BaseModel):
 ARTIFACTS_DIR = Path("artifacts")
 MODEL_PATH = ARTIFACTS_DIR / "inference_class.pkl"
 
-# Using cloudpickle causes seg fault during deserialization process
-# with open(MODEL_PATH, "rb") as file:
-#     Inference = cloudpickle.load(file)
+with open(MODEL_PATH, "rb") as file:
+    Inference = cloudpickle.load(file)
 
 print(Inference.__doc__)
 

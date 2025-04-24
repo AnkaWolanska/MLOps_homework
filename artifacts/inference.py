@@ -23,6 +23,7 @@ class Inference:
         """
         self.model = joblib.load(os.path.join(model_path, "sentiment_model.joblib"))
         self.tokenizer = joblib.load(os.path.join(model_path, "sentiment_tokenizer.joblib"))
+        self.model.eval()
 
     def predict(self, text: str) -> str:
         """
