@@ -34,7 +34,7 @@ inference = Inference(model_path=str(ARTIFACTS_DIR))
 @app.post("/predict", response_model=PredictResponse)
 async def predict(request: PredictRequest):
     input_text = request.text
-    if not input_text.strip():  # Explicitly check for empty input
+    if not input_text.strip(): 
         raise HTTPException(status_code=400, detail="Input text must be a non-empty string.")
     prediction = inference.predict(input_text)
     return PredictResponse(prediction=prediction)
